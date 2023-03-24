@@ -6,7 +6,6 @@ const Bicho = (props) => {
         axios.get(`${props.url}`)
         .then((res)=>{
             setCaracteristicas(res.data)
-            console.log(res.data)
             }
         )
       },[]
@@ -15,6 +14,7 @@ const Bicho = (props) => {
         <div>
           <p>  {caracteristicas.id} </p>
           <p> {caracteristicas.name}</p>
+          <img src={caracteristicas.sprites.front_default} alt="bicho en cuestión" />
 
          
        
